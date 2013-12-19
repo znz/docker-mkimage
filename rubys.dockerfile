@@ -2,6 +2,7 @@
 # docker build -t local/debian-ja:rubys - < rubys.dockerfile
 # docker run -i -t local/debian-ja:rubys
 FROM local/debian-ja:rbenv
+MAINTAINER Kazuhiro NISHIYAMA
 
 RUN bash -c 'set -euo pipefail; \
  set -x; \

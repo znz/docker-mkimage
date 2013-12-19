@@ -48,3 +48,22 @@ or
 and run in docker:
 
     rbenv each ruby -v
+
+### rubys with trunk
+
+build:
+
+    docker build -t local/debian-ja:rubys-trunk - < rubys-trunk.dockerfile
+    sed -e 's/debian/ubuntu/g' rubys-trunk.dockerfile | docker build -t local/ubuntu-ja:rubys-trunk -
+
+run:
+
+    docker run -i -t local/debian-ja:rubys-trunk
+
+or
+
+    docker run -i -t local/debian-ja:rubys-trunk
+
+and run in docker:
+
+    rbenv each ruby -v
