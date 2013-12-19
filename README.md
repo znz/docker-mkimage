@@ -20,11 +20,31 @@ For detail:
 build:
 
     docker build -t local/debian-ja:rbenv - < rbenv.dockerfile
+    sed -e 's/debian/ubuntu/g' rbenv.dockerfile | docker build -t local/ubuntu-ja:rbenv -
 
-usage:
+run:
 
     docker run -i -t local/debian-ja:rbenv
 
 or
 
-    docker run -i -t local/debian-ja:rbenv /bin/bash -l
+    docker run -i -t local/ubuntu-ja:rbenv
+
+### rubys
+
+build:
+
+    docker build -t local/debian-ja:rubys - < rubys.dockerfile
+    sed -e 's/debian/ubuntu/g' rubys.dockerfile | docker build -t local/ubuntu-ja:rubys -
+
+run:
+
+    docker run -i -t local/debian-ja:rubys
+
+or
+
+    docker run -i -t local/debian-ja:rubys
+
+and run in docker:
+
+    rbenv each ruby -v
