@@ -8,6 +8,7 @@ make docker custom base image
 
 Make buildd variant of debian and ubuntu:
 
+    editor ./docker-buildd-images.sh
     bash ./docker-buildd-images.sh
 
 For detail:
